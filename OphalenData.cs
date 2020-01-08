@@ -10,12 +10,14 @@ using Newtonsoft.Json;
 using MoveForFortune.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Net.Http;
 
 namespace MoveForFortune
 {
     public static class OphalenData
     {
         [FunctionName("OphalenData")]
+
         public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req, ILogger log)
         {
             string connectionString = Environment.GetEnvironmentVariable("ServerConnectionString");
