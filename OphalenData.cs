@@ -44,8 +44,7 @@ namespace MoveForFortune
                                 Voornaam = reader["Voornaam"].ToString(),
                                 Naam = reader["Naam"].ToString(),
                                 Email = reader["Email"].ToString(),
-                                Wachtwoord = reader["Wachtwoord"].ToString(),
-                                ThemaId = int.Parse(reader["ThemaId"].ToString()),
+                                Wachtwoord = reader["Wachtwoord"].ToString()
                             });
                         }
                     }
