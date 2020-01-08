@@ -11,6 +11,7 @@ using MoveForFortune.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Net.Http;
+using System.Diagnostics;
 
 namespace MoveForFortune
 {
@@ -51,8 +52,9 @@ namespace MoveForFortune
                 }
                 return new OkObjectResult(LeerkrachtList);
             }
-            catch (Exception)
+            catch (Exception x)
             {
+                Debug.WriteLine(x);
                 return new StatusCodeResult(500);
             }
         }
